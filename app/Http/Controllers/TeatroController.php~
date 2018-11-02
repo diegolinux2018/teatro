@@ -1,0 +1,87 @@
+<?php
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
+
+use App\Models\TblTeatro;
+use App\Models\TblZona;
+
+class TeatroController extends Controller
+{
+	//Lista los teatos
+	public function listar()
+	{
+		return Datatables::of(TblTeatro::all())->addColumn('action', function ($faculties) {
+            		return '<a href="javascript://" onclick="EditarTeatro('.$faculties->tea_id.')" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Editar</a>
+				<a href="javascript://" onclick="EliminaTeatro('.$faculties->tea_id.')" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-trash"></i> Eliminar</a> ';})
+        	->make(true);
+
+	}
+
+	//Fecha:01-11-2018
+	//Creado por:Diedo Rojas
+	//Function encargada de validar los datos no se repitan
+	//Crea la instancia del modelo y guarda los datos a la base de datos
+	public function guardar(Request $request)
+	{
+		if( TblTeatro::where(['tea_nombre'=>$request->txtNombre])->count() > 0 )
+		{
+			$objTeatro = TblTeatro::where(['tea_nombre'=>$request->txtNombre])->get()[0];
+
+			if($objTeatro->tea_id != $request->hdnTeaId)
+			{
+				return response()->json(['success'=>'Ya existe el teatro']);
+			}
+		}
+		else
+		{		
+
+			if( $request->hdnTeaId == 0 )
+			{
+				$objTeatro = new TblTeatro;
+			}
+			else
+			{
+				$objTeatro = TblTeatro::where(['tea_id'=>$request->hdnTeaId])->get()[0];
+			}
+		}
+
+		$objTeatro->tea_id = $request->hdnTeaId;
+		$objTeatro->tea_nombre = $request->txtNombre;
+		$objTeatro->tea_direccion = $request->txtDireccion;
+		$objTeatro->save();
+
+		return response()->json(['success'=>'Se guardo con exito']);
+	}
+
+	//Fecha:01-11-2018
+	//Creado por:Diedo Rojas
+	//Function encargada de buscar los datos a editar
+	public function editar(Request $request)
+	{
+		return response()->json(TblTeatro::where(['tea_id'=>$request->hdnTeaId])->get());
+	}
+
+	//Fecha:01-11-2018
+	//Creado por:Diedo Rojas
+	//Function encargada de consultar todos los datos creados
+	public function get_teatros(Request $request)
+	{
+		return response()->json(TblTeatro::all());
+	}
+
+	//Fecha:01-11-2018
+	//Creado por:Diedo Rojas
+	//Function encargada de buscar los datos a editar
+	public function eliminar(Request $request)
+	{
+		if( TblTeatro::where(['tea_id'=>$request->hdnTeaId])->count() > 0 )
+			return response()->json(['success'=>'El teatro tiene zonas asignadas no se puede eliminar']);
+
+		$objTeatro = TblTeatro::where(['tea_id'=>$request->hdnTeaId])->get()[0];
+		$objTeatro->delete();
+
+		return response()->json(['success'=>'Se elimino con exito']);
+	}
+}

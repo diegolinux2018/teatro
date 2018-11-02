@@ -1,0 +1,79 @@
+
+	<!-- Botón CREAR -->
+	<div class="container-fluid">
+		<div class="row gutter">
+			<div class="col-md-10 col-sm-6 col-xs-12">
+				<h3 class="page-title" id="title"></h3>
+			</div>
+			<div class="col-md-2 col-sm-6 col-xs-12">
+				<ul class="tasks pull-right clearfix">
+					<button id="btnNuevoZona" name="btnNuevoZona" type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-zona"><i class="icon-circle-plus icon-left"></i><?php echo e(__('label.nuevo')); ?></button>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<table class="table table-bordered" id="tblZona">
+		<thead>
+		<tr>
+			<th>Id</th>
+			<th>Zona</th>
+			<th>Nombre</th>
+			<th>Fila</th>
+			<th>Sillas</th>
+			<TH></TH>
+		</tr>
+		</thead>
+	</table>
+
+	<div class="modal fade" id="modal-zona" tabindex="-1" role="dialog" aria-labelledby="modal-zona">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" accion="btnNuevo">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title"></h4>
+				</div>
+				<div class="modal-body">
+					<p id="msnResultado"></p> 
+					<form id="formularioZona" name="formularioZona">
+						<input id="hdnZonId" name="hdnZonId" type="hidden" value="0">
+						<h3>Registrar zonas</h3>
+						<h4>Digite el nombre de la zona, la cantidad de filas y sillas por fila</h4>
+						<fieldset>
+							<select id="ddlTeatro" name="ddlTeatro" class="form-control">
+								<OPTION value="">Seleccione un teatro</OPTION>
+							</select>
+						</fieldset>
+						<fieldset>
+							<input type="text" id="txtNombreZona" placeholder="Nombre zona" class="form-control" name="txtNombreZona" required>
+						</fieldset>
+						<fieldset>
+							<input type="text" id="txtFilasZona" placeholder="Cantidad de filas por zona" class="form-control" name="txtFilasZona" required>
+						</fieldset>
+						<fieldset>
+							<input type="text" id="txtSillasZona" placeholder="Cantidad de sillas por fila" class="form-control" name="txtSillasZona" required>
+						</fieldset>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal"><i class="icon-circle-with-cross icon-left"></i> CERRAR</button>
+							<button type="button" class="btn btn-info" id="btnGuardarZona" name="btnGuardarZona"><i class="icon-save icon-left"></i> GUARDAR </button>
+						</div>
+					</form>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+
+	<?php $__env->startPush('scripts'); ?>
+	<script>
+		var RutaListarZona = '<?php echo route('zona.listar'); ?>';
+		var RutaGuardarZona = '<?php echo route('zona.guardar'); ?>';
+		var RutaEditarZona = '<?php echo route('zona.editar'); ?>';
+		var RutaEliminarZona = '<?php echo route('zona.eliminar'); ?>';
+	</script>
+	<script src="../../resources/views/teatro/js/zona.js">
+
+	</script>
+	<?php $__env->stopPush(); ?>

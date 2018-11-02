@@ -1,0 +1,42 @@
+[2018-10-29 14:40:07] local.ERROR: There are no commands defined in the "docs" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"docs\" namespace. at /var/www/html/teatro/teatro/vendor/symfony/console/Application.php:578)
+[stacktrace]
+#0 /var/www/html/teatro/teatro/vendor/symfony/console/Application.php(618): Symfony\\Component\\Console\\Application->findNamespace('docs')
+#1 /var/www/html/teatro/teatro/vendor/symfony/console/Application.php(226): Symfony\\Component\\Console\\Application->find('docs:models')
+#2 /var/www/html/teatro/teatro/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /var/www/html/teatro/teatro/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2018-10-29 14:40:12] local.ERROR: There are no commands defined in the "doc" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"doc\" namespace. at /var/www/html/teatro/teatro/vendor/symfony/console/Application.php:578)
+[stacktrace]
+#0 /var/www/html/teatro/teatro/vendor/symfony/console/Application.php(618): Symfony\\Component\\Console\\Application->findNamespace('doc')
+#1 /var/www/html/teatro/teatro/vendor/symfony/console/Application.php(226): Symfony\\Component\\Console\\Application->find('doc:models')
+#2 /var/www/html/teatro/teatro/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /var/www/html/teatro/teatro/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2018-10-29 14:41:32] local.ERROR: There are no commands defined in the "code" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"code\" namespace. at /var/www/html/teatro/teatro/vendor/symfony/console/Application.php:578)
+[stacktrace]
+#0 /var/www/html/teatro/teatro/vendor/symfony/console/Application.php(618): Symfony\\Component\\Console\\Application->findNamespace('code')
+#1 /var/www/html/teatro/teatro/vendor/symfony/console/Application.php(226): Symfony\\Component\\Console\\Application->find('code:models')
+#2 /var/www/html/teatro/teatro/vendor/symfony/console/Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Console/Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /var/www/html/teatro/teatro/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2018-10-29 14:47:05] local.ERROR: Class 'Reliese\Coders\CodersServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Reliese\\Coders\\CodersServiceProvider' not found at /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Reliese\\\\Coders\\\\...')
+#1 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(548): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(206): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(297): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /var/www/html/teatro/teatro/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /var/www/html/teatro/teatro/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
