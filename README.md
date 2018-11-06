@@ -9,5 +9,6 @@ Usuario: dfrojas@gmail.com
 contraseña: linux123
 
 La base de datos esta en la carpeta ScriptBaseDatos y el archivo es bd_teatro.zip
+El archivo TeatroPruebaNRS.zip es el archivo enviado inicialmente en el correo.
 
 Gracias
