@@ -2,7 +2,7 @@
 
 Proyecto de prueba para admicion de NRS echo en php con lavarel y mysql
 
-Url en localhost http://localhost/teatro/public/
+Url en localhost http://localhost/teatro/public/index.php
 
 El usuario administrador para acceder al sistema es 
 Usuario: dfrojas@gmail.com 
